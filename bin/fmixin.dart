@@ -1,17 +1,17 @@
 mixin TunjKehadiran {
-  void tunjkehadiran() {
-    print('tunjangan');
+  int tunjkehadiran(int tunj) {
+    return tunj;
   }
 }
 
 mixin GajiDasar {
-  void gajidasar() {
-    print('gaji dasar');
+  int gajidasar(int gjdasar) {
+    return gjdasar;
   }
 }
 
 mixin GajiSKS {
-  void gajisks() {
-    print('gaji SKS');
+  int gajisks(int gjsks) {
+    return gjsks;
   }
 }

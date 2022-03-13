@@ -12,6 +12,6 @@ mixin GajiDasar {
 
 mixin GajiSKS {
   int gajisks(int gjsks) {
-    return gjsks;
+    return gjsks * 40000;
   }
 }

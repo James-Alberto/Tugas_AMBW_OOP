@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'package:dcli/dcli.dart';
+
 import 'fpegawaimahasiswa.dart';
 import 'fdosenstaff.dart';
 
@@ -79,11 +81,11 @@ void main(List<String> arguments) {
       String? dtInput = stdin.readLineSync();
       chc = int.parse(dtInput!);
       if (chc == 1) {
-        stdout.write("SKS : ${verrel.sks}");
+        print("SKS : ${verrel.sks}");
       } else if (chc == 2) {
         int total = 0;
         total += verrel.gajisks(verrel.sks);
-        stdout.write("Total Gaji : $total");
+        print("Total Gaji : $total");
       }
     } else if (choice == 3) {
       stdout.write("1. Lihat Jumlah SKS\n");
@@ -93,12 +95,12 @@ void main(List<String> arguments) {
       String? dtInput = stdin.readLineSync();
       chc = int.parse(dtInput!);
       if (chc == 1) {
-        stdout.write("SKS : ${sumano.sks}");
+        print("SKS : ${sumano.sks}");
       } else if (chc == 2) {
         int total = 0;
         total += sumano.gajisks(sumano.sks);
         total += sumano.tunjkehadiran(tunjanganbulan);
-        stdout.write("Total Gaji : $total");
+        print("Total Gaji : $total");
       }
     } else if (choice == 4) {
       stdout.write("1. Lihat Jumlah SKS\n");
@@ -108,13 +110,13 @@ void main(List<String> arguments) {
       String? dtInput = stdin.readLineSync();
       chc = int.parse(dtInput!);
       if (chc == 1) {
-        stdout.write("SKS : ${wong.sks}");
+        print("SKS : ${wong.sks}");
       } else if (chc == 2) {
         int total = 0;
         total += wong.gajidasar(gajidasar);
         total += wong.gajisks(wong.sks);
         total += wong.tunjkehadiran(tunjanganbulan);
-        stdout.write("Total Gaji : $total");
+        print("Total Gaji : $total");
       }
     } else if (choice == 5) {
       stdout.write("1. Ambil Cuti 1 Hari\n");
@@ -126,10 +128,10 @@ void main(List<String> arguments) {
       chc = int.parse(dtInput!);
       if (chc == 1) {
         if (bryan.cuti == 0) {
-          stdout.write("Cuti gagal diambil karena jatah cuti sudah habis");
+          print("Cuti gagal diambil karena jatah cuti sudah habis");
         } else {
           bryan.cuti -= 1;
-          stdout.write("Cuti berhasil diambil. Sisa cuti : ${bryan.cuti} hari");
+          print("Cuti berhasil diambil. Sisa cuti : ${bryan.cuti} hari");
         }
       } else if (chc == 2) {
         bryan.absen();

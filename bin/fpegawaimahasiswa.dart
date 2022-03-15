@@ -59,13 +59,16 @@ class Mahasiswa extends Person {
   void changestatus() {
     if (_status == "Aktif") {
       _status = "Cuti";
-    }
-    if (_status == "Cuti") {
+    } else if (_status == "Cuti") {
       _status = "Aktif";
     }
   }
 
   void calculateipk(double lastips, double currentips) {
-    _ipk = (lastips + currentips) / 2;
+    if (lastips == 0.0) {
+      ipk = currentips;
+    } else {
+      ipk = (lastips + currentips) / 2;
+    }
   }
 }

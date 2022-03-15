@@ -34,9 +34,8 @@ class DosenTetap extends Pegawai with GajiDasar, GajiSKS, TunjKehadiran {
 
 class Staff extends Pegawai with GajiDasar, TunjKehadiran {
   int _cuti = 12;
-  Staff(String _nama, int _umur, String _gender, String _nip, int cuti)
+  Staff(String _nama, int _umur, String _gender, String _nip)
       : super(_nama, _umur, _gender, _nip) {
-    _cuti = cuti;
   }
   int get cuti => this._cuti;
   set cuti(int value) => this._cuti = value;

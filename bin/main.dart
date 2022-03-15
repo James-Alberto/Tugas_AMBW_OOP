@@ -53,9 +53,14 @@ void main(List<String> arguments) {
 
         if (chc == 1) {
           int sks;
-          stdout.write("Masukkan Jumlah SKS : ");
-          String? dtInput = stdin.readLineSync();
-          sks = int.parse(dtInput!);
+          do {
+            stdout.write("Masukkan Jumlah SKS : ");
+            String? dtInput = stdin.readLineSync();
+            sks = int.parse(dtInput!);
+            if (sks < 2 || sks > 24) {
+              print("Jumlah sks tidak boleh kurang dari 2 atau lebih dari 24");
+            }
+          } while (sks < 2 || sks > 24);
           sastra.sks += sks;
         } else if (chc == 2) {
           sastra.changestatus();
